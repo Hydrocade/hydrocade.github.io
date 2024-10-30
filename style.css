@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #003366;
+    padding: 20px 0;
+    /* Make the header a flex container */
+    display: flex;
+    align-items: center;  /* Vertically align items in the header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+header a img { /* Style the logo image */
+    vertical-align: middle; /* Vertically align the logo */
+    max-width: 40%; /* Limit the maximum width of the logo to 20% */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* Add vertical alignment */
+    display: flex;
+    align-items: center; /* Vertically center the text within the link */
+    height: 100%; /* Make the link take up the full height of the nav */
+}
+
+section {
+    padding: 40px 0;
+    position: relative; /* To position the rectangle within the section */
+}
+
+section h2 {
+    margin-top: 0;
+    color: white; /* White text for section headers */
+    position: relative; /* To position the header relative to the rectangle */
+    z-index: 1; /* Ensure the header appears above the rectangle */
+    padding-top: 10px; /* Add padding to move the text down */
+    padding-bottom: 40px; /* Add padding to move the text down */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+img {
+    max-width: 90%; /* Make the image occupy a maximum of 50% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+img {
+    max-width: 90%; /* Make the image occupy a maximum of 50% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Styles for the info bar */
+#info-bar {
+    background-color: #f0f0f0; /* Grey background color */
+    padding: 20px 0;
+}
+
+.info-section {
+    display: flex; /* Align items in a row */
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center; /* Vertically center content */
+    text-align: center; /* Center text within each section */
+}
+
+.info-item {
+    flex: 1; /* Each item takes equal width */
+}
+
+.vertical-line {
+    border-left: 2px solid white; /* White vertical line */
+    height: 50px; /* Adjust height as needed */
+}
+
+.directions-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff; /* Blue background color for the link */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Dark blue rectangle divider */
+section::before {
+    content: "";
+    position: absolute;
+    top: 35px; /* Align with the top of the section header text */
+    left: 0;
+    width: 30%; /* Extend 30% across the screen */
+    height: 55px; /* Adjust the height as needed */
+    background-color: #003366; /* Dark blue color */
+    z-index: 0; /* Place the rectangle behind the section content */
+    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+}
+
+#info-bar::before {
+    display: none; 
+}
