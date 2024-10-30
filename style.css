@@ -120,8 +120,8 @@ section::before {
     position: absolute;
     top: 35px; /* Align with the top of the section header text */
     left: 0;
-    width: 30%; /* Extend 30% across the screen */
-    height: 55px; /* Adjust the height as needed */
+    width: 45%; /* Extend 30% across the screen */
+    height: 70px; /* Adjust the height as needed */
     background-color: #003366; /* Dark blue color */
     z-index: 0; /* Place the rectangle behind the section content */
     border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
