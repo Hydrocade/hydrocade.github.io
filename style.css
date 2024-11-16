@@ -130,3 +130,8 @@ section::before {
 #info-bar::before {
     display: none; 
 }
+
+#image-gallery::before {
+    display: none; 
+}
+
