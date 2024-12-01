@@ -131,6 +131,53 @@ section::before {
     display: none; 
 }
 
+/* Pricing Panel Styles */
+
+.pricing-row {
+    display: flex; /* Enables flexbox layout */
+    gap: 40px; /* Add space between the panels */
+
+  }
+
+.pricing-panel {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding-bottom: 20px;
+    margin-bottom: 20px; /* Add some spacing between panels */
+    width: 50%; /* Each panel takes up half the width */
+}
+
+.pricing-panel .title {
+    background-color: #85bb65; /* Green title bar */
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    margin-bottom: 10px;
+    display: block;
+    text-align: center; /* Add this to center the text */
+}
+
+.pricing-panel p {
+    line-height: 1.6; /* Adjust line spacing as needed */
+}
+
+.pricing-panel h3 { 
+    margin-top: 0; /* Remove the top margin */
+}
+
+/* Media query for smaller screens (e.g., mobile phones) */
+@media (max-width: 600px) { /* Adjust the breakpoint as needed */
+    .pricing-row {
+      flex-direction: column; /* Stack panels vertically */
+      gap: 20px; /* Adjust spacing as needed */
+    }
+  
+    .pricing-panel {
+      width: 100%; /* Make each panel take full width */
+    }
+  }
+
 #image-gallery::before {
     display: none; 
 }
