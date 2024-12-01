@@ -51,18 +51,38 @@ nav a {
     height: 100%; /* Make the link take up the full height of the nav */
 }
 
+
 section {
-    padding: 40px 0;
-    position: relative; /* To position the rectangle within the section */
+    z-index: 0; /* Ensure the section has a lower z-index */
 }
 
+/* Remove the ::before rule from section */
+section::before { 
+    display: none; 
+}
+
+/* Apply the rectangle to the h2 within each section */
 section h2 {
-    margin-top: 0;
-    color: white; /* White text for section headers */
-    position: relative; /* To position the header relative to the rectangle */
-    z-index: 1; /* Ensure the header appears above the rectangle */
-    padding-top: 10px; /* Add padding to move the text down */
-    padding-bottom: 40px; /* Add padding to move the text down */
+    position: relative;
+    z-index: 1;
+    padding: 10px 20px; 
+    display: inline-block;
+    color: white;
+    margin-top: 30px; /* Adjust this value as needed */
+    margin-bottom: 50px; /* Increased margin-bottom */
+
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    top: 0px; /* Align with the top of the h2 */
+    left: -60px;  
+    right: 0px;  
+    height: 67px; 
+    background-color: #85bb65;
+    z-index: -1; 
+    border-radius: 0 20px 20px 0; 
 }
 
 footer {
@@ -112,19 +132,6 @@ img {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-}
-
-/* Green rectangle divider */
-section::before {
-    content: "";
-    position: absolute;
-    top: 35px; /* Align with the top of the section header text */
-    left: 0;
-    width: 40%; /* Extend 30% across the screen */
-    height: 67px; /* Adjust the height as needed */
-    background-color: #85bb65; /* Green color */
-    z-index: 0; /* Place the rectangle behind the section content */
-    border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
 }
 
 #info-bar::before {
