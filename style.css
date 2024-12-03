@@ -1,191 +1,226 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-header {
+  }
+  
+  header {
     background-color: #85bb65;
     padding: 20px 0;
-    /* Make the header a flex container */
     display: flex;
-    align-items: center;  /* Vertically align items in the header */
-}
-
-header h1 {
+    align-items: center; 
+  }
+  
+  header h1 {
     margin: 0;
     font-size: 24px;
     color: white;
-}
-
-header a img { /* Style the logo image */
-    vertical-align: middle; /* Vertically align the logo */
-    max-width: 40%; /* Limit the maximum width of the logo to 20% */
-    height: auto; /* Maintain aspect ratio */
-}
-
-nav ul {
+  }
+  
+  header a img { 
+    vertical-align: middle; 
+    max-width: 40%; 
+    height: auto; 
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: right;
-}
-
-nav li {
+  }
+  
+  nav li {
     display: inline-block;
     margin-left: 20px;
-}
-
-nav a {
+  }
+  
+  nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    /* Add vertical alignment */
     display: flex;
-    align-items: center; /* Vertically center the text within the link */
-    height: 100%; /* Make the link take up the full height of the nav */
-}
-
-
-section {
-    z-index: 0; /* Ensure the section has a lower z-index */
-}
-
-/* Remove the ::before rule from section */
-section::before { 
+    align-items: center; 
+    height: 100%; 
+  }
+  
+  section {
+    z-index: 0; 
+  }
+  
+  section::before { 
     display: none; 
-}
-
-/* Apply the rectangle to the h2 within each section */
-section h2 {
+  }
+  
+  section h2 {
     position: relative;
     z-index: 1;
     padding: 10px 20px; 
     display: inline-block;
     color: white;
-    margin-top: 30px; /* Adjust this value as needed */
-    margin-bottom: 50px; /* Increased margin-bottom */
-
-}
-
-section h2::before {
+    margin-top: 30px; 
+    margin-bottom: 50px; 
+  }
+  
+  section h2::before {
     content: "";
     position: absolute;
-    top: 0px; /* Align with the top of the h2 */
+    top: 0px; 
     left: -60px;  
     right: 0px;  
     height: 67px; 
     background-color: #85bb65;
     z-index: -1; 
     border-radius: 0 20px 20px 0; 
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-}
-
-img {
-    max-width: 90%; /* Make the image occupy a maximum of 50% of its container's width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-img {
-    max-width: 90%; /* Make the image occupy a maximum of 50% of its container's width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
-/* Styles for the info bar */
-#info-bar {
-    background-color: #f0f0f0; /* Grey background color */
+  }
+  
+  img {
+    max-width: 90%; 
+    height: auto; 
+  }
+  
+  /* Styles for the info bar */
+  #info-bar {
+    background-color: #f0f0f0; 
     padding: 20px 0;
+  }
+  
+  .info-section {
+    display: flex; 
+    justify-content: space-around;
+    align-items: stretch; /* Stretch items to fill the container height */ 
+    text-align: center; 
+  }
+  
+  .info-item {
+    flex: 1; 
+    padding: 5px 15px; /* Set the top/bottom padding smaller than the left/right padding */
+    display: flex; 
+    flex-direction: column; 
+    text-align: center; 
+    position: relative; /* Required for positioning the pseudo-element */
 }
 
-.info-section {
-    display: flex; /* Align items in a row */
-    justify-content: space-around; /* Distribute space around items */
-    align-items: center; /* Vertically center content */
-    text-align: center; /* Center text within each section */
+.info-item::before { /* Create a pseudo-element for the line */
+    content: "";
+    position: absolute;
+    top: 34px; /* Adjust top spacing */
+    bottom: 20px; /* Adjust bottom spacing */
+    right: 0;
+    width: 2px;
+    background-color: white;
 }
 
-.info-item {
-    flex: 1; /* Each item takes equal width */
+.info-item:last-child::before { /* Remove line from the last item */
+    content: none;
 }
 
-.vertical-line {
-    border-left: 2px solid white; /* White vertical line */
-    height: 50px; /* Adjust height as needed */
-}
-
-.directions-link {
-    display: inline-block;
+  .info-item h3 { /* Align the titles to the top */
+    margin-top: 0; 
+  }
+  
+  .vertical-line {
+    display: none; 
+  }
+  
+  .directions-link {
+    display: block;
     padding: 8px 16px;
-    background-color: #007bff; /* Blue background color for the link */
+    background-color: #007bff; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
-}
-
-#info-bar::before {
-    display: none; 
-}
-
-/* Pricing Panel Styles */
-
-.pricing-row {
-    display: flex; /* Enables flexbox layout */
-    gap: 40px; /* Add space between the panels */
-
+    margin: 0 auto;
   }
-
-.pricing-panel {
+  
+  #info-bar::before {
+    display: none; 
+  }
+  
+  /* Pricing Panel Styles */
+  .pricing-row {
+    display: flex; 
+    gap: 40px; 
+  }
+  
+  .pricing-panel {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); 
     padding-bottom: 20px;
-    margin-bottom: 20px; /* Add some spacing between panels */
-    width: 50%; /* Each panel takes up half the width */
-}
-
-.pricing-panel .title {
-    background-color: #85bb65; /* Green title bar */
+    margin-bottom: 20px; 
+    width: 50%; 
+  }
+  
+  .pricing-panel .title {
+    background-color: #85bb65; 
     color: white;
     padding: 10px;
-    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+    border-radius: 10px 10px 0 0; 
     margin-bottom: 10px;
     display: block;
-    text-align: center; /* Add this to center the text */
-}
-
-.pricing-panel p {
-    line-height: 1.6; /* Adjust line spacing as needed */
-}
-
-.pricing-panel h3 { 
-    margin-top: 0; /* Remove the top margin */
-}
-
-/* Media query for smaller screens (e.g., mobile phones) */
-@media (max-width: 600px) { /* Adjust the breakpoint as needed */
+    text-align: center; 
+  }
+  
+  .pricing-panel p {
+    line-height: 1.6; 
+  }
+  
+  .pricing-panel h3 { 
+    margin-top: 0; 
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) { 
     .pricing-row {
-      flex-direction: column; /* Stack panels vertically */
-      gap: 20px; /* Adjust spacing as needed */
+      flex-direction: column; 
+      gap: 10px; 
     }
   
     .pricing-panel {
-      width: 100%; /* Make each panel take full width */
+      width: 100%; 
+    }
+  
+    .info-section {
+        flex-direction: column;
+    }
+
+    .info-item {
+        border-right: none; 
+        position: relative; /* Add this for positioning the pseudo-element */
+        padding-bottom: 2%;
+    }
+
+    .info-item::after { /* Use ::after for the horizontal line */
+        content: "";
+        position: absolute;
+        left: 69px; /* Adjust left spacing */
+        right: 69px; /* Adjust right spacing */
+        bottom: 0; 
+        height: 2px;
+        background-color: white;
+    }
+
+    .info-item::before { 
+        content: none; /* Remove right border on smaller screens */
+    }
+    .info-item:last-child::after { /* Remove line from the last item */
+        content: none; 
     }
   }
-
-#image-gallery::before {
+  
+  #image-gallery::before {
     display: none; 
-}
-
+  }
