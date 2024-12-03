@@ -10,12 +10,19 @@
 
   <title>Collins Washateria & Laundromat</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
   <header>
     <div class="container">
-      <a href="#home"> <img src="collinsLogoPNG.png" alt="CollinsLogo"> </a> 
+      <a href="#home"> <img src="collinsLogoPNG.png" alt="CollinsLogo"> </a>
       <nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#laundromat">Laundromat</a></li>
@@ -28,11 +35,12 @@
 
   <section id="info-bar">
     <div class="container">
-      <div class="info-section"> 
+      <div class="info-section">
         <div class="info-item">
           <h3>🗺️ Location</h3>
           <p>140 Collins Rd, Richmond, TX 77469</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=140+Collins+Rd,+Richmond,+TX+77469" class="directions-link" target="_blank">Get Directions</a> 
+          <a href="https://www.google.com/maps/search/?api=1&query=140+Collins+Rd,+Richmond,+TX+77469" class="directions-link" target="_blank">Get
+            Directions</a>
         </div>
         <div class="info-item">
           <h3>🕒 Hours</h3>
@@ -70,9 +78,9 @@
   <section id="pricing">
     <div class="container">
       <h2>Pricing</h2>
-      <div class="pricing-row"> 
+      <div class="pricing-row">
         <div class="pricing-panel">
-          <h3 class="title">Washers</h3> 
+          <h3 class="title">Washers</h3>
           <ul>
             <li>20 lb: $3.00</li>
             <li>40 lb: $5.25</li>
@@ -86,7 +94,7 @@
             <li>Large: $0.25 / 6min</li>
           </ul>
         </div>
-      </div> 
+      </div>
     </div>
   </section>
 
@@ -101,7 +109,7 @@
         Please stay tuned for updates on this website and at our social media channels <b>@hydrocade</b>.
       </p>
     </div>
-  </section> 
+  </section>
 
   <section id="contact">
     <div class="container">
@@ -116,6 +124,12 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('show');
+    }
+  </script>
 </body>
+
 </html>
