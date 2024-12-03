@@ -296,4 +296,8 @@ body {
       display: flex;
       align-items: center; /* Align items vertically in the nav */
     }
+
+    header a img { 
+        max-width: 60%; /* Increase logo size by 50% (40% * 1.5 = 60%) */
+    }
   }
