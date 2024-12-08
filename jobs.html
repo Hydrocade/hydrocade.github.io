@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Collins Washateria & Laundromat - Jobs</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">  
+        <a href="index.html#home"> <img src="collinsLogoPNG.png" alt="CollinsLogo"> </a> 
+        <nav>
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#laundromat">Laundromat</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="jobs.html#jobs">Jobs</a></li> 
+          </ul>
+        </nav>
+      </div> 
+    </div>
+  </header>
+
+  <section id="jobs"> 
+    <div class="container"> 
+      <h2>Join Our Team!</h2>
+      <div class="job-description"> 
+        <h3>Laundry Assistant</h3>
+        <p>We are seeking a friendly and reliable Laundry Assistant to join our team! As a Laundry Assistant, you will
+          play a key role in ensuring our customers have a positive and efficient laundry experience.</p>
+        <p><strong>Responsibilities:</strong></p>
+        <ul>
+          <li>Assisting customers with laundry needs</li>
+          <li>Maintaining a clean and organized laundry facility</li>
+          <li>Operating washers and dryers</li>
+          <li>Folding and organizing laundry</li>
+        </ul>
+        <p><strong>Requirements:</strong></p>
+        <ul>
+          <li>Excellent customer service skills</li>
+          <li>Ability to work independently and as part of a team</li>
+          <li>Strong work ethic and attention to detail</li>
+        </ul>
+        <a href="https://www.indeed.com/viewjob?jk=your_job_id" target="_blank" class="apply-button">Apply Now on
+          Indeed</a> 
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Hydrocade LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('show');
+
+      // Add event listeners to menu links after toggling
+      const menuLinks = document.querySelectorAll('nav ul li a'); 
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('show'); // Hide the menu
+        });
+      });
+    }
+  </script>
+</body>
+</html>
