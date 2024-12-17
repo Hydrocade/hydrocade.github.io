@@ -194,6 +194,21 @@ nav li {
   .pricing-panel h3 {
     margin-top: 0;
   }
+
+  #image-gallery::before {
+    display: none;
+  }
+  
+  .image-slider {
+    display: flex;
+    align-items: center; 
+    margin-right: 45px; /* Adjust this value as needed */
+  }
+  
+  .prev-btn, .next-btn {
+    display: inline-block; 
+    margin: 0 10px; /* Add some space around the buttons */
+  }
   
   /* Media query for smaller screens */
   @media (max-width: 600px) {
@@ -205,7 +220,12 @@ nav li {
     .pricing-panel {
       width: 100%;
     }
-  
+
+    .prev-btn, .next-btn { /* Apply to both buttons */
+      width: 30px; 
+      padding: 5px 5px; 
+    }
+
     .info-section {
       flex-direction: column;
     }
