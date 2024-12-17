@@ -47,7 +47,7 @@
         </div>
         <div class="info-item">
           <h3>🕒 Hours</h3>
-          <p>Mon-Fri | 8AM to 8PM<br>Sat-Sun | 7AM to 9PM<br>Last Wash: 30 minutes before closing</p>
+          <p>Mon-Fri | 7:30AM to 9PM<br>Sat-Sun | 7AM to 9PM<br>Last Wash: 1 hour before closing</p>
         </div>
         <div class="info-item">
           <h3>📱 Phone</h3>
@@ -60,9 +60,25 @@
   <section id="image-gallery">
     <div class="container">
       <div class="image-slider">
-        <button class="prev-btn"><</button>
-        <img src="interior.jpg" alt="Interior Image" class="current-image">
-        <button class="next-btn">></button>
+        <button class="prev-btn" onclick="prevImage()"><</button>
+        <img src="interior.jpg" alt="Interior Image" class="current-image" id="currentImage">
+        <button class="next-btn" onclick="nextImage()">></button>
+      </div>
+      <script>
+        const images = ["2024-12-13.jpg", "20241209_080817.jpg", "20241209_080829.jpg", "20241209_080836.jpg", "20241209_080848.jpg", "20241209_080852.jpg", "20241209_115718.jpg", "20241210_160307.jpg", "20241213_073701.jpg", "20241213_073703.jpg", "20241213_120311.jpg", "20241213_120333.jpg", "20241213_120534.jpg", "20241213_120542.jpg", "interior.jpg", "2024-12-15.jpg", "side.jpg"];
+
+        let currentImageIndex = 0;
+
+        function nextImage() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          document.getElementById("currentImage").src = images[currentImageIndex];
+        }
+
+        function prevImage() {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          document.getElementById("currentImage").src = images[currentImageIndex];
+        }
+      </script>
       </div>
     </div>
   </section>
@@ -94,7 +110,7 @@
         <div class="pricing-panel">
           <h3 class="title">Dryers</h3>
           <ul>
-            <li>Large: $0.25 / 6min</li>
+            <li>Large: $0.25 / 5min</li>
           </ul>
         </div>
       </div>
