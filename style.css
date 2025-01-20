@@ -300,20 +300,41 @@ nav li {
 
 /* Styles for the announcement bar */
 #announcement-bar {
-    background-color: #ff0000; /* Change to your desired color */
-    color: #ffffff; /* Change to a contrasting color */
-    padding: 10px 20px;
-    position: fixed; /* Make it sticky on top */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; /* Ensure it's on top of other elements */
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px 20px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.announcement-bar-content {
+  display: flex;
+  justify-content: space-between; /* Align text and button */
+  align-items: center;
 }
 
 .announcement-bar-text {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center; /* Center the text */
 }
+
+#close-announcement {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Shift the rest of the content down */
+body {
+  padding-top: 40px; /* Adjust this value to match the announcement bar height */
+}
+
   /* Show the menu icon on smaller screens */
   @media (max-width: 600px) {
     .menu-icon {
