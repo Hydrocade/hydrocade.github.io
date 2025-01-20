@@ -25,13 +25,14 @@
 </head>
 
 <body>
-      <section id="announcement-bar">
-        <div class="container">
-            <div class="announcement-bar-text">
-                Due to winter weather, Collins Washateria will be closed this Tuesday, January 21st, 2025.
-            </div>
-        </div>
-    </section>
+  <section id="announcement-bar">
+    <div class="container">
+      <div class="announcement-bar-content">
+        <div class="announcement-bar-text">Due to winter weather, Collins Washateria will be closed Tuesday, January 21st, 2025.</div>
+        <button id="close-announcement">X</button>
+      </div>
+    </div>
+  </section>
   <header>
     <div class="container">
       <div class="header-content">  
@@ -185,6 +186,16 @@
         });
       });
     }
+  </script>
+  <script>
+    const closeButton = document.getElementById('close-announcement');
+    const announcementBar = document.getElementById('announcement-bar');
+  
+    closeButton.addEventListener('click', () => {
+      announcementBar.style.display = 'none';
+      // Remove padding from body to restore original layout
+      document.body.style.paddingTop = '0'; 
+    });
   </script>
 </body>
 </html>
