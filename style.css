@@ -297,7 +297,23 @@ nav li {
 .apply-button:hover {
   background-color: #0062cc; /* Darkens the background color on hover */
 }
-  
+
+/* Styles for the announcement bar */
+#announcement-bar {
+    background-color: #ff0000; /* Change to your desired color */
+    color: #ffffff; /* Change to a contrasting color */
+    padding: 10px 20px;
+    position: fixed; /* Make it sticky on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+.announcement-bar-text {
+    font-size: 16px;
+    font-weight: bold;
+}
   /* Show the menu icon on smaller screens */
   @media (max-width: 600px) {
     .menu-icon {
@@ -342,3 +358,4 @@ nav li {
       max-width: 80%; /* Increase logo size on smaller screens */
     }
   }
+
