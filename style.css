@@ -330,11 +330,6 @@ nav li {
   cursor: pointer;
 }
 
-/* Shift the rest of the content down */
-body {
-  padding-top: 40px; /* Adjust this value to match the announcement bar height */
-}
-
   /* Show the menu icon on smaller screens */
   @media (max-width: 600px) {
     .menu-icon {
